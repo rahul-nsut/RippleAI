@@ -16,3 +16,7 @@ langchain-openai
 langchain-text-splitters
 psycopg2-binary
 bcrypt
+sqlalchemy
+pydantic
+passlib
+PyJWT
