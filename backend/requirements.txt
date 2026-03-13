@@ -14,4 +14,5 @@ langchain-community
 langchain-chroma
 langchain-openai
 langchain-text-splitters
+psycopg2-binary
 bcrypt
