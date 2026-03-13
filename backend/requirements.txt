@@ -1,0 +1,17 @@
+fastapi
+uvicorn
+requests
+beautifulsoup4
+pypdf
+unstructured
+python-dotenv
+chromadb
+apscheduler
+python-multipart
+langchain
+langchain-core
+langchain-community
+langchain-chroma
+langchain-openai
+langchain-text-splitters
+bcrypt
