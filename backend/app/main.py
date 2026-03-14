@@ -113,6 +113,9 @@ def _filter_suggestions_by_candidate_content(
 def root():
     return {"message": "AI doc updater is running"}
 
+@app.api_route("/health", methods=["GET", "HEAD"])
+def health():
+    return {"status": "ok"}
 
 @app.post("/ingest")
 def ingest(doc_id: str, url: str):
