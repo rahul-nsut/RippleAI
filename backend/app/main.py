@@ -23,6 +23,8 @@ from app.suggestions.prompts.build_suggestion_prompt import build_suggestion_pro
 from app.suggestions.prompts.build_change_context_prompt import build_change_context_prompt
 from app.suggestions.source_context.extractor import extract_source_context
 from app.suggestions.llm.client import OpenRouterLLMClient
+from app.db.models import Base
+from app.db.session import engine
 from app.apis.auth import router as auth_router
 from app.auth.dependencies import get_current_user
 from app.db.models import User
@@ -35,6 +37,9 @@ logging.basicConfig(
 logger = logging.getLogger(__name__)
 
 app = FastAPI(title="AI Knowledge Base Auto Updater")
+@app.on_event("startup")
+def create_tables():
+    Base.metadata.create_all(bind=engine)
 
 app.add_middleware(
     CORSMiddleware,
