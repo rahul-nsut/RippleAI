@@ -15,8 +15,8 @@ langchain-chroma
 langchain-openai
 langchain-text-splitters
 psycopg2-binary
-bcrypt
+bcrypt==4.0.1
 sqlalchemy
 pydantic
-passlib
+passlib[bcrypt]
 PyJWT
