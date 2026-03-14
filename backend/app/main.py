@@ -40,6 +40,8 @@ app = FastAPI(title="AI Knowledge Base Auto Updater")
 @app.on_event("startup")
 def create_tables():
     Base.metadata.create_all(bind=engine)
+def debug_env():
+    print("DATABASE_URL:", os.getenv("DATABASE_URL"))
 
 app.add_middleware(
     CORSMiddleware,
